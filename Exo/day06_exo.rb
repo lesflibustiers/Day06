@@ -45,9 +45,7 @@ def trader_du_dimanche(array)
   min_value = [array[0],0] #[value,index]
   max_value = [array[0],0] #[value,index]
   best_price = 0
-
   puts array[1]
-
   for i in 1...array.length
     unless array[i+1].nil? 
       if min_value[0] > array[i] && best_price < array[i+1] - array[i]
@@ -64,11 +62,9 @@ def trader_du_dimanche(array)
       end
     end
   end
-
   puts "min_value = #{min_value}"
   puts "max_value = #{max_value}"
   puts "best_price = #{best_price}"
-
 end
 
 #trader_du_dimanche([17,3,6,9,15,8,6,1,10]) #12
